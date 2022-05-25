@@ -1,0 +1,20 @@
+#about-content-container{
+    background-color: indianred;
+    display:flex;
+    flex-direction: column;
+    height: 80vh;
+    padding:4em 2em;
+}
+
+#about1{
+    height: 30rem;
+    width: 55rem;
+    border-style: solid;
+}
+
+#about2{
+    height: 20rem;
+    width: 45rem;
+    border-style: solid;
+    align-self: flex-end;
+}
