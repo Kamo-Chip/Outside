@@ -2,42 +2,59 @@ import "../styles/shop.css";
 import { useState, useEffect } from "react";
 
 export default function Shop(props){
-    const [currentlyDisplayedItems, setCurrentlyDisplayedItems ] = useState(props.stock);
-    const filteredItems = currentlyDisplayedItems;
+    const [currentlyDisplayedItems, setCurrentlyDisplayedItems ] = useState(props.stock)
+    const [filteredItems, setFilteredItems] = useState([]);
+    let items = [];
+    function showFilterSideBar(){
+        const sidebar = document.getElementById("filter-sidebar");
+        sidebar.style.visibility = "visible";
+    }
 
     function hideFilterSideBar(){
         const sidebar = document.getElementById("filter-sidebar");
         sidebar.style.visibility = "hidden"
     }
 
-    function showFilterSideBar(){
-        const sidebar = document.getElementById("filter-sidebar");
-        sidebar.style.visibility = "visible";
-    }
-
-
     function setFilter(e){
-        for(let i = 0; i < currentlyDisplayedItems.length; i++){
-            console.log(currentlyDisplayedItems[i]);
-            if(e.target.id !== currentlyDisplayedItems[i].tag)continue;
-            // filteredItems.push(currentlyDisplayedItems[i]);
-            console.log(currentlyDisplayedItems.length)
+        setFilteredItems(filteredItems.concat(e.target.id));
+        for(let i = 0; i < props.stock.length; i++){
+            if(e.target.id === props.stock[i].tag){
+                items.push(props.stock[i]);
+            }
         }
-        //console.log(currentlyDisplayedItems.length)
 
-        //console.log(filteredItems);
+        setCurrentlyDisplayedItems(items);
+        
+        console.log(filteredItems);
     }
+
+    function clearFilter(){
+        setCurrentlyDisplayedItems(props.stock);
+    }
+
     //Add item amount tracker
     function displayFilterSideBar(){
         
     const sidebar = 
         <div id="filter-sidebar">
-            <div id="filter-option">
-                <span id="toeShoes" onClick={setFilter}>Toe shoes</span>
-                <p id="tent">Tents</p>
-                <p id="bottle">Bottles</p>
-                <p id="hikingBag">Hiking bags</p>
-                <button onClick={hideFilterSideBar}>Filter</button>
+            <div id="filter-options-container">
+                <div id="filter-option">
+                    <span id="toeShoes" onClick={setFilter}>Toe shoes</span>
+                    <p>x</p>
+                </div>
+                <div id="filter-option">
+                    <span id="tent" onClick={setFilter}>Tents</span>
+                    <p>x</p>
+                </div>
+                <div id="filter-option">
+                    <span id="bottle" onClick={setFilter}>Bottles</span>
+                    <p>x</p>
+                </div>
+                <div id="filter-option">
+                    <span id="hikingBag" onClick={setFilter}>Hiking bags</span>
+                    <p>x</p>
+                </div>   
+                <button onClick={clearFilter}>Clear</button>
             </div>
         </div>
     
@@ -48,10 +65,6 @@ export default function Shop(props){
         <div>
             <div id="shop-content-container">
                 {displayFilterSideBar()}
-                <div id="shop-header">
-                    <div id="filter-icon" onClick={showFilterSideBar}><p>Filter</p></div>
-                    <p>Showing All</p>
-                </div>
                 {displayItems(currentlyDisplayedItems)}
             </div>
         </div>
