@@ -1,50 +1,53 @@
 import "../styles/shop.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import Cart from "../classes/cart";
 
 export default function Shop(props){
-    const [currentlyDisplayedItems, setCurrentlyDisplayedItems ] = useState(props.stock)
-    const [filteredItems, setFilteredItems] = useState([]);
-    let items = [];
-    function showFilterSideBar(){
-        const sidebar = document.getElementById("filter-sidebar");
-        sidebar.style.visibility = "visible";
-    }
-
-    function hideFilterSideBar(){
-        const sidebar = document.getElementById("filter-sidebar");
-        sidebar.style.visibility = "hidden"
-    }
+    const [currentlyDisplayedItems, setCurrentlyDisplayedItems ] = useState(props.stock);
 
     function setFilter(e){
-        const source = e.target;
-        console.log(source);
-        // if(source.localName === "span"){
-        //     setFilteredItems(filteredItems.concat(e.target.id));
-        // }else{
-        //     setFilteredItems(filteredItems.concat(source.children[0].id));
-        // }
-       
+        let items = [];
+        let source;
+
+        if(e.target.localName === "span"){
+            source = e.target.id;
+        }else{
+            source = e.target.children[0].id;
+        }
+
         for(let i = 0; i < props.stock.length; i++){
-            if(e.target.id === props.stock[i].tag){
+            if(source === props.stock[i].tag){
                 items.push(props.stock[i]);
             }
         }
 
         setCurrentlyDisplayedItems(items);
-        
-        console.log(filteredItems);
     }
 
     function clearFilter(){
+        styleFocusLost();
         setCurrentlyDisplayedItems(props.stock);
     }
 
     function styleBackground(e){
-        const source = e.target.localName;
-        if( source === "span" || source === "p"){
-            e.target.parentElement.style.backgroundColor = "rgb(213, 226, 213)";
+        styleFocusLost(e);
+        if(e.target.localName === "div"){
+            e.target.setAttribute("id", "styled-option");
+        }else{
+            e.target.parentElement.setAttribute("id", "styled-option");
         }
-        e.target.style.backgroundColor = "rgb(213, 226, 213)";
+
+       
+    }
+
+    function styleFocusLost(){
+        const filters = document.getElementById("filter-options-container");
+        for(let i = 0; i < filters.children.length; i++){
+            if(filters.children[i].id === "styled-option"){
+                filters.children[i].removeAttribute("id");
+            }
+        }
     }
     //Add item amount tracker
     function displayFilterSideBar(){
@@ -52,21 +55,17 @@ export default function Shop(props){
     const sidebar = 
         <div id="filter-sidebar">
             <div id="filter-options-container">
-                <div onClick={setFilter} id="filter-option">
-                    <span  id="toeShoes" onClick={setFilter}>Toe shoes</span>
-                    <p>x</p>
+                <div onClick={setFilter}className="filter-option">
+                    <span id="toeShoes" onClick={styleBackground}>Toe shoes</span>
                 </div>
-                <div onClick={styleBackground} id="filter-option">
-                    <span id="tent" onClick={setFilter}>Tents</span>
-                    <p>x</p>
+                <div onClick={setFilter} className="filter-option">
+                    <span id="tent" onClick={styleBackground}>Tents</span>
                 </div>
-                <div onClick={styleBackground} id="filter-option">
-                    <span id="bottle" onClick={setFilter}>Bottles</span>
-                    <p>x</p>
+                <div onClick={setFilter} className="filter-option">
+                    <span id="bottle" onClick={styleBackground}>Bottles</span>
                 </div>
-                <div onClick={styleBackground} id="filter-option">
-                    <span id="hikingBag" onClick={setFilter}>Hiking bags</span>
-                    <p>x</p>
+                <div onClick={setFilter} className="filter-option">
+                    <span id="hikingBag" onClick={styleBackground}>Hiking bags</span>
                 </div>   
                 <button onClick={clearFilter}>Clear</button>
             </div>
@@ -91,12 +90,13 @@ function displayItems(stock){
             
             {stock.map((item, index) => {
                 return (
-                    <li  key={index} id="item">
-                        <img src={item.imgReference} alt={item.name}/>
-                        <p>{item.name}</p>
-                        <p>{item.price}</p>
-                    </li>
-
+                    <Link to={`/shop/${item.name}`} key={index}>
+                        <li id="item">
+                            <img src={item.imgReference} alt={item.name}/>
+                            <p>{item.name}</p>
+                            <p>$ {item.price.toFixed(2)}</p>
+                        </li>
+                    </Link>
                 )
             })}
         </ul>

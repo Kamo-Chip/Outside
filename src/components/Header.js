@@ -6,7 +6,7 @@ export default function Header() {
         <nav>
             <ul>
                 <Link to="/">
-                    <li>Outside</li>
+                    <li id="logo">Outside</li>
                 </Link>
                 <div id="nav-links">
                     <Link to="/about">

@@ -1,4 +1,6 @@
 import "../styles/footer.css";
+import ghLogo from "../images/github-logo.png";
+import { Link } from "react-router-dom";
 
 export default function Footer(){
     return (
@@ -13,12 +15,12 @@ export default function Footer(){
             <div id="footer-links-container">
                 <div>
                     <h4>Links</h4>
-                    <p>About us</p>
-                    <p>Shop</p>
+                    <Link to="/about"><p id="footer-link">About us</p></Link>
+                    <Link to="/shop"><p id="footer-link">Shop</p></Link>
                 </div>
                 <div>
                     <h4>Contact</h4>
-                    <p>github profile</p>
+                    <a href="https://github.com/Kamo-Chip"><img style={{height: "2rem"}}src={ghLogo} alt="github logo"/></a>
                 </div>
             </div>
         </div>
