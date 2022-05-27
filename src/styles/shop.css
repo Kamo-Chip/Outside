@@ -29,7 +29,7 @@
 
 }
 
-#filter-option{
+.filter-option{
     display: flex;
     flex-direction: row;
     width: fit-content;
@@ -40,6 +40,10 @@
     background-color: honeydew;
     margin-bottom: 1em;
     padding: .5em;
+}
+
+#styled-option{
+    background-color: rgb(203, 214, 203);
 }
 
 #filter-option p{

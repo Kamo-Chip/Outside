@@ -2,7 +2,8 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     font-size: 1.5rem;
-    background-color: honeydew;
+    background-color: #8b8468;
+    position: relative;
 }
 
 #footer-links-container{
@@ -12,6 +13,10 @@
     justify-content: space-around;
 }
 
+#footer-link{
+    color: #000;
+}
+
 #subscription-container{
     display: flex;
     flex-direction: column;
@@ -19,6 +24,12 @@
     width: fit-content;
     justify-self: end;
     margin-right: 5em;
+}
+
+#input-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 #subscription-container p{

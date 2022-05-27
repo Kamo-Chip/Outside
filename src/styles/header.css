@@ -4,13 +4,17 @@ ul{
     list-style: none;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
+    padding: 0;
 }
 
 nav{
     display: flex;
     flex-direction: row;
+    width: 100vw;
     height: 5vh;
-    background-color: honeydew;
+    position: absolute;
+    color: #fff;
 }
 
 #nav-links{
@@ -19,4 +23,23 @@ nav{
     width: 15%;
     justify-content: space-between;
     margin-right: 1em;
+    padding-top: .5em;
+}
+
+#logo{
+    font-size: 3rem;
+    margin: .5em 0 0 .5em;
+}
+
+li{
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    transform: scale(1.1);
 }
