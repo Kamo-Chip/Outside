@@ -18,10 +18,6 @@
 }
 
 #filter-sidebar{
-    /* position: absolute;
-    z-index: 10; */
-    /* visibility: hidden; */
-    background-color: red;
     width: 20vw;
     height: fit-content;
 }
@@ -60,12 +56,10 @@
 
 #item{
     height: 30rem;
-
     border-style: solid;
     margin: 2em;
     display: flex;
     flex-direction: column;
-    /* box-sizing: border-box; */
     padding: 1em;
 }
 

@@ -16,7 +16,14 @@ export default function Shop(props){
     }
 
     function setFilter(e){
-        setFilteredItems(filteredItems.concat(e.target.id));
+        const source = e.target;
+        console.log(source);
+        // if(source.localName === "span"){
+        //     setFilteredItems(filteredItems.concat(e.target.id));
+        // }else{
+        //     setFilteredItems(filteredItems.concat(source.children[0].id));
+        // }
+       
         for(let i = 0; i < props.stock.length; i++){
             if(e.target.id === props.stock[i].tag){
                 items.push(props.stock[i]);
@@ -32,25 +39,32 @@ export default function Shop(props){
         setCurrentlyDisplayedItems(props.stock);
     }
 
+    function styleBackground(e){
+        const source = e.target.localName;
+        if( source === "span" || source === "p"){
+            e.target.parentElement.style.backgroundColor = "rgb(213, 226, 213)";
+        }
+        e.target.style.backgroundColor = "rgb(213, 226, 213)";
+    }
     //Add item amount tracker
     function displayFilterSideBar(){
         
     const sidebar = 
         <div id="filter-sidebar">
             <div id="filter-options-container">
-                <div id="filter-option">
-                    <span id="toeShoes" onClick={setFilter}>Toe shoes</span>
+                <div onClick={setFilter} id="filter-option">
+                    <span  id="toeShoes" onClick={setFilter}>Toe shoes</span>
                     <p>x</p>
                 </div>
-                <div id="filter-option">
+                <div onClick={styleBackground} id="filter-option">
                     <span id="tent" onClick={setFilter}>Tents</span>
                     <p>x</p>
                 </div>
-                <div id="filter-option">
+                <div onClick={styleBackground} id="filter-option">
                     <span id="bottle" onClick={setFilter}>Bottles</span>
                     <p>x</p>
                 </div>
-                <div id="filter-option">
+                <div onClick={styleBackground} id="filter-option">
                     <span id="hikingBag" onClick={setFilter}>Hiking bags</span>
                     <p>x</p>
                 </div>   
