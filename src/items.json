@@ -1,0 +1,110 @@
+{
+    "items": [
+        {
+            "name": "Vibram Fivefingers Khaki",
+            "price": 46.05,
+            "tag": "toeShoes",
+            "imgReference": "https://www.vibramonlinesouthafrica.com/images/vibramshoes/Vibram%20FiveFingers%20Sale%20South%20Africa%206.jpg",
+            "description": "This casual minimalist shoe offers nature lovers a breathable, sustainable slip-on shoe with a true barefoot feel. Made from a hemp / poly blend and designed to slip on as a shoe or fold back as a clog, the CVT Hemp is both durable and comfortable."
+        },
+        {
+            "name": "Vibram Fivefingers Leather",
+            "price": 47.00,
+            "tag": "toeShoes",
+            "imgReference": "https://www.vibramonlinesouthafrica.com/images/vibramshoes/Vibram%20FiveFingers%20Sale%20South%20Africa%208.jpg",
+            "description": "This casual minimalist shoe features a stylish and super-comfortable leather upper that is breathable, salt and sweat resistant, and easy to slip on and off. The Vibram VI-LITE outsole with XS TREK is lightweight, shock-absorbing and non-marking, making it great for indoor and casual outdoor use. The heel folds down to convert into a slip-on clog, making the CVT-Leather a comfortable all-day shoe."
+        },
+        {
+            "name": "Vibram Fivefingers EVO",
+            "price": 47.50,
+            "tag": "toeShoes",
+            "imgReference": "https://www.vibramonlinesouthafrica.com/images/vibramshoes/Vibram%20FiveFingers%20Sale%20South%20Africa%2030.jpg",
+            "description": "Maximum articulation and ground feel. Assured grip and essential protection. Light, airy and simple adjustable upper design. This style is part of our max feel product philosophy."
+        },
+        {
+            "name": "Vibram Fivefingers KSO",
+            "price": 45.50,
+            "tag": "toeShoes",
+            "imgReference": "https://www.vibramonlinesouthafrica.com/images/vibramshoes/Vibram%20FiveFingers%20Sale%20South%20Africa%2024.jpg",
+            "description": "The KSO is arguably our most successful FiveFinger to date, mainly due to its versatility. We added this back into the mix a few years back to celebrate the rebirth of a legend. When you're scrambling up a rocky bluff or bounding along a riverbank, the last thing you want is gravel and grit seeping into your FiveFingers. So why not Keep Stuff Out! The KSO has a snug fit, one of our most minimal sole constructions for maximum ground feel, and a breathable, quick drying upper. The KSO also features a thin, abrasion resistant stretch polyamide and breathable stretch mesh that wraps your entire foot to do just that. A single hook-and-loop closure helps secure the fit. Non-Marking XS Trek performance rubber soles are razor-siped for sure grip."
+        },
+        {
+            "name": "Vibram Fivefingers V-Run",
+            "price": 44.65,
+            "tag": "toeShoes",
+            "imgReference": "https://www.vibramonlinesouthafrica.com/images/vibramshoes/Vibram%20FiveFingers%20Sale%20South%20Africa%2038.jpg",
+            "description": "Featuring a soft, perforated upper to maximize breathability, this model is very comfortable. This is an ideal running shoe for those making the transition from traditional footwear to a more minimalist approach. The thin sole construction lets you feel your run, connecting you to the true barefoot running experience."
+        },
+        {
+            "name": "Deuter Futura Hiking 32L",
+            "price": 203.25,
+            "tag": "hikingBag",
+            "imgReference": "https://media.capeunionmart.co.za/i/capeunionmart/100425024_C01_1?$large_PROD$",
+            "description": "The Deuter Futura Hiking 32L Backpack is made for longer day hikes and even multiday hikes. The new mesh in the Aircomfort back system provides maximum ventilation and active comfort fit for up to 25% less sweating. The movable ActiveFit shoulder straps and the ergonomic hip fins (with pull-forward adjustment) also ensure pleasant wearing comfort. The separate bottom compartment creates additional organization options in the backpack whilst the stretch side pockets provide easy access for water bottles. The Deuter Futura 32L is compatible with a 3-litre drinking system/hydration reservoir."
+        },
+        {
+            "name": "K-Way Huron 40L",
+            "price": 101.50,
+            "tag": "hikingBag",
+            "imgReference": "https://media.capeunionmart.co.za/i/capeunionmart/153189_2200_1?$large_PROD$",
+            "description": "Soldier on through your next adventure with the K-Way Huron 40L Hiking. This uniquely South African pack falls under our K-Way Military range and features a roomy 40-litre main compartment, as well as a detachable carry-bag for toiletries and essentials. Whether you need to make it to the gym and the office in the space of a day or want to go away for the weekend, this bag will be at your command."
+        },
+        {
+            "name": "K-Way Adventure 70L",
+            "price": 120.60,
+            "tag": "hikingBag",
+            "imgReference": "https://media.capeunionmart.co.za/i/capeunionmart/154387_6969_1?$large_PROD$",
+            "description": "Explore the great outdoors and travel to foreign destinations with the K-Way Adventure 60 + 10L Hiking Pack. An air vantage back system allows for maximum comfort, while easy access to pack contents is ensured through top, front, and bottom entry points. The hip belt pockets are ideal for small items such as action camera batteries, lip balm and more, while quick access to gadgets is ensured through the top lid pocket. If you’re planning a serious adventure, this backpack should be the first thing on your list."
+        },
+        {
+            "name": "Coleman Fast-pitch Instant Cabin",
+            "price": 381.10,
+            "tag": "tent",
+            "imgReference": "https://media.capeunionmart.co.za/i/capeunionmart/165701_8607_1?$large_PROD$",
+            "description": "The Coleman® FastPitch™ 8 Instant Cabin Tent ensures that setting up around the campsite is a lot quicker. This model is Coleman’s easiest-setup tent and comes with poles pre-attached. FastPitch™ tents are designed for quick pitch, with frames that set up considerably faster than other tents, making them great for last minute getaways. Laboratory-certified Coleman® UVGuard™ protection fabrics feature an SPF50 factor that provides superior protection against the sun’s ultraviolet rays. The tent material is also fire-retardant, which ensures that the fabric will not flare dangerously out of control and will self-extinguish, giving time to escape in the event of an emergency."
+        }, 
+        {
+            "name": "K-Way Horizon",
+            "price": 225.00,
+            "tag": "tent",
+            "imgReference": "https://media.capeunionmart.co.za/i/capeunionmart/102322_6900_2?$large_PROD$",
+            "description": "The K-Way Horizon 6 Person Tent is able to sleep a family of six and is tall enough to stand up in. The Horizon tent weighs roughly 10.3kg, so don't consider it as a hiking or expedition option, rather for settling in and setting up camp. A waterhead of 1500mm will handle most rainy conditions, while netting will keep out mosquitos and other pesky insects. Reflective guy ropes to help you navigate around the tent at night or in low light.  The roof window allows for excellent ventilation. Large front-vestibule provides added storage space at night.  Please note that this tent sleeps six but does not allow additional space for baggage, cooking or lounging"
+        },
+        {
+            "name": "OZtrail Privacy Ensuite",
+            "price": 63.50,
+            "tag": "tent",
+            "imgReference": "https://media.capeunionmart.co.za/i/capeunionmart/101420017_C54_1?$large_PROD$",
+            "description": "OZtrail Privacy Ensuite Single Pop-Up Tent is ideal for use as a change room, shower, or toilet cubicle around the campsite. It pops up in seconds and folds away easily thanks to a sprung steel frame. The entrance is also extra-high to give you room for manoeuvrability and includes a shower rose hook for extra range. There is also zip access in the ceiling for the shower bag cord. A rear window and mesh panels on the upper walls ensure ventilation, while extra guy lines allow the tent to be anchored in windy conditions. A carry bag makes it easy to pack and transport."
+        },
+        {
+            "name": "EcoVessel Boulder 750ml",
+            "price": 47.60,
+            "tag": "bottle",
+            "imgReference": "https://media.capeunionmart.co.za/i/capeunionmart/162639_2788_1?$large_PROD$",
+            "description": "The Ecovessel Boulder 710ml Bottle features a protective silicone bumper, as well as signature TriMax® triple insulation that keeps drinks cold up to 74 hours and hot up to 14 hours. The Reflecta™ lid is insulated and lined with stainless steel, which enhances temperature retention and prevents drinks from ever touching plastic. This dual opening lid is easy to grip, has a wide mouth for easy filling, and a soft silicone spout for comfortable drinking. The lid is securely attached to a sturdy carrying strap, so you always know where it is."
+        },
+        {
+            "name": "EcoVessel Aspen 450ml",
+            "price": 38.10,
+            "tag": "bottle",
+            "imgReference": "https://media.capeunionmart.co.za/i/capeunionmart/154904_0100_1?$large_PROD$",
+            "description": "Keep your beverages at optimal temperature during everyday activities or outdoor pursuits with the Ecovessel Aspen 473ml Flask. This functional, good-looking bottle features TriMax Tripple Insulation, which keeps drinks cold for up to 80 hours and hot for up to 16 hours - entirely condensation-free. The premium 18/8 stainless steel construction means it is free of BPA, phthalates and liners."
+        },
+        {
+            "name": "Bobble Bottle 550ml",
+            "price": 9.50,
+            "tag": "bottle",
+            "imgReference": "https://media.capeunionmart.co.za/i/capeunionmart/110338_0100_1?$large_PROD$",
+            "description": "Fight plastic and enjoy enhanced beverages with Bobble Bottle 550ml. It features interchangeable and replaceable filters that improve the taste of tap water. This water bottle is made from recycled plastic and is free of BOZ, Phthalates and PVC. In fact, each Bobble Bottle is the equivalent of 300 single-serve plastic water bottles."
+        },
+        {
+            "name": "Laken Kilimanjaro 1L",
+            "price": 15.90,
+            "tag": "bottle",
+            "imgReference": "https://media.capeunionmart.co.za/i/capeunionmart/100405089_C27_1?$large_PROD$",
+            "description": "Keep yourself hydrated with the Laken Kilimanjaro Bottle 1L Futura, including a lid that is guaranteed to not leak. This high-grade aluminium cylindrical bottle has a one-litre capacity and allows you to easily attach it to your backpack or belt for the ultimate convenience."
+        }
+      
+    ]
+}
