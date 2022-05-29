@@ -4,6 +4,7 @@
     font-size: 1.5rem;
     background-color: #8b8468;
     position: relative;
+    
 }
 
 #footer-links-container{
@@ -15,6 +16,11 @@
 
 #footer-link{
     color: #000;
+    text-decoration: none;
+}
+
+.footer-links{
+    text-decoration: none;
 }
 
 #subscription-container{

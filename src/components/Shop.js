@@ -1,7 +1,6 @@
 import "../styles/shop.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Cart from "../classes/cart";
 
 export default function Shop(props){
     const [currentlyDisplayedItems, setCurrentlyDisplayedItems ] = useState(props.stock);
@@ -75,7 +74,7 @@ export default function Shop(props){
     }
 
     return (
-        <div>
+        <div id="shop">
             <div id="shop-content-container">
                 {displayFilterSideBar()}
                 {displayItems(currentlyDisplayedItems)}
@@ -90,7 +89,7 @@ function displayItems(stock){
             
             {stock.map((item, index) => {
                 return (
-                    <Link to={`/shop/${item.name}`} key={index}>
+                    <Link  className = "shop-link" to={`/shop/${item.name}`} key={index}>
                         <li id="item">
                             <img src={item.imgReference} alt={item.name}/>
                             <p>{item.name}</p>

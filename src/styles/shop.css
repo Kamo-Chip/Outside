@@ -1,10 +1,19 @@
 #shop-content-container{
     display: flex;
     flex-direction: row;
+    background-color: #fff;
+    color: #000;
+    padding-top: 5em;
 }
+
 #shop-header{
     display: grid;
     grid-template-columns: 3rem auto;
+}
+
+.shop-link{
+    color: #000;
+    text-decoration: none;
 }
 
 #shop-header p{
@@ -56,19 +65,31 @@
     justify-items: center;
     padding: 0;
     width: 80vw;
+    height: fit-content;
 }
 
 #item{
-    height: 30rem;
-    border-style: solid;
+    height: fit-content;
     margin: 2em;
     display: flex;
     flex-direction: column;
     padding: 1em;
+    color: #000;
+    border-style: solid;
+    border-color: #000;
+    border-width: 1px;
+}
+
+#item:hover{
+    transform: scale(1.01);
 }
 
 #item img{
     height: 26rem;
     width: 20rem;
     align-self: center;
+}
+
+#item p{
+    text-decoration: none;
 }

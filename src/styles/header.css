@@ -6,15 +6,17 @@ ul{
     justify-content: space-between;
     align-items: center;
     padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 nav{
     display: flex;
     flex-direction: row;
     width: 100vw;
-    height: 5vh;
+    height: fit-content;
     position: absolute;
-    color: #fff;
+    color: #000;
 }
 
 #nav-links{
@@ -28,18 +30,24 @@ nav{
 
 #logo{
     font-size: 3rem;
-    margin: .5em 0 0 .5em;
+    margin: 0 0 0 .5em;
 }
 
-li{
-    color: #fff;
+.header-link li{
+    color: #000;
     font-size: 1.5rem;
+    font-weight: 500;
 }
 
-a{
+#header-link-cart{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.header-link{
     text-decoration: none;
+    margin-top: 0;
 }
 
-a:hover{
+#header-link-cart:hover, .header-link:hover{
     transform: scale(1.1);
 }

@@ -1,7 +1,14 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import "../styles/itemdetail.css";
+import Item from "../classes/item";
+import Cart from "../classes/cart";
+
 export default function ItemDetail(props){
+    const { cart } = props;
+    
+    const { onCartUpdate } = props;
+   
     const [ item, setItem ] = useState({}); 
 
     const { name } = useParams();
@@ -18,6 +25,12 @@ export default function ItemDetail(props){
         }
     }
 
+    function addToCart(){
+        const cartItem = getItem();
+        cart.addItem(new Item(cartItem.name, cartItem.price, cartItem.tag, cartItem.imgReference));
+        onCartUpdate(new Cart(cart.items));
+    }
+
     return (
         <div id="product-container">
             <img src={item.imgReference} alt={item.name}/>
@@ -29,7 +42,7 @@ export default function ItemDetail(props){
                 <div id="description">
                     <p>{item.description}</p>
                     <div id="reviews">Reviews</div>
-                    <button>Add To Cart</button>
+                    <button onClick={addToCart}>Add To Cart</button>
                 </div>
             </div>
         </div>
