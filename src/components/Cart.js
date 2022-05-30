@@ -34,23 +34,29 @@ export default function Cart(props) {
         </span>
       </div>
       <div id="cart-contents-container">
+      {props.cart.getQuantity() === 0 && 
+          <p id="empty-cart">Cart is empty. Stock up on your gear</p>
+        }
         {cartItems.map((element, index) => {
-          console.log(element);
           return (
             <div id="cart-item" key={`${index}cart`}>
               <img id="cart-image" src={element.imgReference} alt="product" />
               <div id="item-wrapper">
-                <p>{element.name}</p>
+                <div id="item-header">
+                  <p>{element.name}</p>
+                  <p id="subtotal">${(element.price * element.quantity).toFixed(2)}</p>
+                </div>
                 <div id="quantity">
                   <span id={element.name} onClick={decrement}>-</span>
                   <p>{element.quantity}</p>
                   <span id={element.name} onClick={increment}>+</span>
                 </div>
               </div>
-              <p>${element.price * element.quantity}</p>
             </div>
           );
         })}
+        <p id="total">Total: $ {props.cart.getTotal()}</p>
+        <button id="buy">Checkout</button>
       </div>
     </div>
   );

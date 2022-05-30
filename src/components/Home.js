@@ -1,29 +1,39 @@
 import "../styles/home.css";
+import { Link } from "react-router-dom";
 
 export default function Home(){
     return (
         <div className="main-page">
             <div id="h1">
                 <p>The best place to supply your exploration</p>
-                <button>Shop</button>
+                <Link to="/shop">
+                    <button>Shop</button>
+                </Link>
+          
             </div>
 
             <img src="https://static.bold.org/outdoor-wilderness.jpeg" id="main-image" alt="People hiking"/>
             <div id="featured-categories">
                 <h2>Featured categories</h2>
                 <div id="category-container">
-                    <div id="category">
-                        <img src="https://spy.com/wp-content/uploads/2020/06/toe-running-shoes-featured-image.jpg?w=958&h=599&crop=1" id="category-image" alt="Toe shoes"/>
-                        <h3>Toe shoes</h3>
-                    </div>
-                    <div id="category">
-                        <img src="https://camotrek.com/wp-content/uploads/2019/12/hiking-backpack-packed-main.jpg" id="category-image" alt="Bag"/>
-                        <h3>Hiking bags</h3>
-                    </div>  
-                    <div id="category">
-                        <img src="https://images.unsplash.com/photo-1550957886-ac45931e5779?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80" id="category-image" alt="Tent"/>
-                        <h3>Tents</h3>
-                    </div>
+                    <Link to="/shop">
+                        <div id="category">
+                            <img src="https://spy.com/wp-content/uploads/2020/06/toe-running-shoes-featured-image.jpg?w=958&h=599&crop=1" id="category-image" alt="Toe shoes"/>
+                            <h3>Toe shoes</h3>
+                        </div>
+                    </Link>
+                    <Link to="/shop">
+                        <div id="category">
+                            <img src="https://camotrek.com/wp-content/uploads/2019/12/hiking-backpack-packed-main.jpg" id="category-image" alt="Bag"/>
+                            <h3>Hiking bags</h3>
+                        </div>  
+                    </Link>
+                    <Link to="/shop">
+                        <div id="category">
+                            <img src="https://images.unsplash.com/photo-1550957886-ac45931e5779?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80" id="category-image" alt="Tent"/>
+                            <h3>Tents</h3>
+                        </div>
+                    </Link>
                 </div>
             </div>
             <div id="mission-container">
@@ -48,4 +58,8 @@ export default function Home(){
             </div>
         </div>
     )
+}
+
+function linkToShop(){
+
 }

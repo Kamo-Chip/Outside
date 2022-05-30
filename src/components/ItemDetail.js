@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import "../styles/itemdetail.css";
 import Item from "../classes/item";
 import Cart from "../classes/cart";
+import star from "../images/star.svg";
 
 export default function ItemDetail(props){
     const { cart } = props;
@@ -20,6 +21,7 @@ export default function ItemDetail(props){
     function getItem(){
         for(let i = 0; i < props.stock.length; i++){
             if(props.stock[i].name === name){
+                props.stock[i].price = (Number)(props.stock[i].price).toFixed(2);
                 return props.stock[i];
             }
         }
@@ -31,17 +33,26 @@ export default function ItemDetail(props){
         onCartUpdate(new Cart(cart.items));
     }
 
+    
+
     return (
         <div id="product-container">
             <img src={item.imgReference} alt={item.name}/>
             <div id="product-details">
                 <div id="product-header">
                     <h1>{item.name}</h1>
-                    <p id="price">$ {item.price}</p>
+                    <p id="price">$ {(item.price)}</p>
                 </div>
                 <div id="description">
                     <p>{item.description}</p>
-                    <div id="reviews">Reviews</div>
+                    <div id="reviews">
+                        <p>Reviews</p>
+                        <img src={star} alt="rating"/>
+                        <img src={star} alt="rating"/>
+                        <img src={star} alt="rating"/>
+                        <img src={star} alt="rating"/>
+                        <img src={star} alt="rating"/>
+                    </div>
                     <button onClick={addToCart}>Add To Cart</button>
                 </div>
             </div>

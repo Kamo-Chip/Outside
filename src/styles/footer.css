@@ -3,8 +3,7 @@
     grid-template-columns: 2fr 1fr;
     font-size: 1.5rem;
     background-color: #8b8468;
-    position: relative;
-    
+    width: 100%;
 }
 
 #footer-links-container{

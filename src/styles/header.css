@@ -1,31 +1,36 @@
-ul{
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
 nav{
     display: flex;
     flex-direction: row;
-    width: 100vw;
+    justify-content: center;
+    width: 100%;
     height: fit-content;
     position: absolute;
     color: #000;
 }
 
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    justify-content: space-between;
+}
+
+
 #nav-links{
     display: flex;
     flex-direction: row;
-    width: 15%;
+    width: fit-content;
+    position: relative;
+    right: 0;
     justify-content: space-between;
     margin-right: 1em;
     padding-top: .5em;
+    align-self: flex-end;
+    justify-self: flex-end;
 }
 
 #logo{
@@ -39,13 +44,10 @@ nav{
     font-weight: 500;
 }
 
-#header-link-cart{
+#header-link{
     font-size: 1.5rem;
     font-weight: 500;
-}
-.header-link{
-    text-decoration: none;
-    margin-top: 0;
+    width: 70px;
 }
 
 #header-link-cart:hover, .header-link:hover{

@@ -30,7 +30,7 @@ export default function App(){
         <div>
             <Cart cart={cart} onCartUpdate={onCartUpdate}/>
             <BrowserRouter>
-                <Header/>
+                <Header cart={cart}/>
                     <Routes>
                         <Route path="/" element={<Home/>}></Route>
                         <Route path="/about" element={<About/>}></Route>

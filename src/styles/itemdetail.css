@@ -1,12 +1,15 @@
 #product-container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr;
     grid-row-gap: 2em;
+    min-height: 100vh;
+    padding-top: 5em;
 }
 
 #product-details{
     display: flex;
     flex-direction: column;
+    align-self: center;
 }
 
 #product-header{
@@ -17,4 +20,13 @@
 
 #price{
     margin-right: 10em;
+}
+
+#description{
+    font-size: 1.5rem;
+}
+
+#description button{
+    font-size: 1.5rem;
+    margin-top: 2em;
 }

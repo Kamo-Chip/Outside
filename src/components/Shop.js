@@ -1,6 +1,7 @@
 import "../styles/shop.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import filterIcon from "../images/filter.svg";
 
 export default function Shop(props){
     const [currentlyDisplayedItems, setCurrentlyDisplayedItems ] = useState(props.stock);
@@ -53,6 +54,7 @@ export default function Shop(props){
         
     const sidebar = 
         <div id="filter-sidebar">
+            <h1 style={{marginLeft: ".5em", textDecoration: "underline"}}>Filter</h1>
             <div id="filter-options-container">
                 <div onClick={setFilter}className="filter-option">
                     <span id="toeShoes" onClick={styleBackground}>Toe shoes</span>
@@ -66,7 +68,7 @@ export default function Shop(props){
                 <div onClick={setFilter} className="filter-option">
                     <span id="hikingBag" onClick={styleBackground}>Hiking bags</span>
                 </div>   
-                <button onClick={clearFilter}>Clear</button>
+                <button onClick={clearFilter}>Clear Filter</button>
             </div>
         </div>
     
@@ -93,7 +95,7 @@ function displayItems(stock){
                         <li id="item">
                             <img src={item.imgReference} alt={item.name}/>
                             <p>{item.name}</p>
-                            <p>$ {item.price.toFixed(2)}</p>
+                            <p>$ {(Number)(item.price).toFixed(2)}</p>
                         </li>
                     </Link>
                 )

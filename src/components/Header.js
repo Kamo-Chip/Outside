@@ -3,7 +3,8 @@ import "../styles/header.css";
 import "../styles/cart.css";
 import shoppingBag from "../images/shoppingbag.svg";
 
-export default function Header() {
+export default function Header(props) {
+    const { cart } = props;
     return (
         <nav>
             <ul>
@@ -17,8 +18,7 @@ export default function Header() {
                     <Link className="header-link" to="/shop">
                         <li >Shop</li>
                     </Link>
-                    <li id="header-link" onClick={showCart}><img style={{height: "2.5rem"}}src={shoppingBag} alt="cart"/></li>
-                    
+                    <li id="header-link" onClick={showCart}><img style={{height: "2.5rem"}}src={shoppingBag} alt="cart"/>{cart.getQuantity()}</li>
                 </div>
             </ul>
         </nav>

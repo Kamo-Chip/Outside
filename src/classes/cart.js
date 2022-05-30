@@ -34,6 +34,18 @@ export default class Cart{
         return -1;
     }
 
+    removeItem(itemName){
+        let updatedItems = [];
+
+        for(let i = 0; i < this.items.length; i++){
+            if(this.items[i].name !== itemName){
+                updatedItems.push(this.items[i]);
+            }
+        }
+
+        this.items = updatedItems;
+    }
+
     incrQuantity(itemName){
         for(let i = 0; i < this.items.length; i++){
             if(this.items[i].name === itemName){
@@ -46,10 +58,14 @@ export default class Cart{
 
     decrQuantity(itemName){
         for(let i = 0; i < this.items.length; i++){
-            if(this.items[i].name === itemName){
-                if(this.items[i] !== 0){
-                    this.items[i].quantity--;
-                }
+
+            if(this.items[i].quantity === 1){
+                this.removeItem(itemName);
+                return;
+            }
+
+            if(this.items[i].name === itemName && this.items[i] !== 0){
+                this.items[i].quantity--;
             }
         }
     }
@@ -62,5 +78,15 @@ export default class Cart{
         });
 
         return quantity;
+    }
+
+    getTotal(){
+        let total = 0;
+
+        this.items.forEach(element => {
+            total += (Number)(element.price * element.quantity);
+        });
+
+        return total.toFixed(2);
     }
 }
