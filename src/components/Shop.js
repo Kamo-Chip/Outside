@@ -1,7 +1,6 @@
 import "../styles/shop.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import filterIcon from "../images/filter.svg";
 
 export default function Shop(props){
     const [currentlyDisplayedItems, setCurrentlyDisplayedItems ] = useState(props.stock);
@@ -49,7 +48,7 @@ export default function Shop(props){
             }
         }
     }
-    //Add item amount tracker
+    
     function displayFilterSideBar(){
         
     const sidebar = 

@@ -3,7 +3,7 @@
     grid-template-columns: 2fr 1fr;
     font-size: 1.5rem;
     background-color: #8b8468;
-    width: 100%;
+    width: 100vw;
 }
 
 #footer-links-container{
@@ -49,4 +49,30 @@
 #subscribe-button{
     height: 2.5rem;
     font-size: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    #footer{
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    #subscription-container{
+        margin:0;
+        padding-right: .5em;
+        box-sizing: border-box;
+    }
+
+    #subscription-container p{
+        padding-left: .5em;
+    }
+
+    #input-cotainer{
+        width: 100%;
+    }
+
+    #email-input{
+        width: 70%;
+        font-size: 1rem;
+    }
 }

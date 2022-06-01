@@ -2,7 +2,7 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 100%;
+    width: 100vw;
     height: fit-content;
     position: absolute;
     color: #000;
@@ -42,6 +42,7 @@ ul{
     color: #000;
     font-size: 1.5rem;
     font-weight: 500;
+    padding: 0 .5em;
 }
 
 #header-link{
@@ -52,4 +53,15 @@ ul{
 
 #header-link-cart:hover, .header-link:hover{
     transform: scale(1.1);
+}
+
+@media only screen and (max-width: 425px){
+    #logo{
+        font-size: 2rem;
+        padding: 0;
+    }
+
+    #nav-links{
+        margin: 0;
+    }
 }
